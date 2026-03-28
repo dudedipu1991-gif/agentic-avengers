@@ -1,7 +1,10 @@
-# streamlit_app.py
-
 import os
-import streamlit as st  # <-- this defines st
+import streamlit as st
+from core.orchestration import MarketResearchWorkflow
+
+st.write("DEBUG: starting app")
+st.write("DEBUG: GROQ_MODEL =", os.getenv("GROQ_MODEL"))
+st.write("DEBUG: GROQ_API_KEY set =", bool(os.getenv("GROQ_API_KEY")))
 
 from core.orchestration import MarketResearchWorkflow
 
